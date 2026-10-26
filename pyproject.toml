@@ -1,0 +1,28 @@
+[project]
+name = "restaurant-finder"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "feifeigd", email = "feifeigd@21cn.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "a2a-sdk[http-server]>=0.3.0,<0.4.0",
+    "a2ui-a2a>=0.1.0",
+    "click>=8.5.0",
+    "dotenv>=0.9.9",
+    "google-adk>=2.13.0",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+restaurant-finder = "restaurant_finder:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+# Hatchling 构建 Python wheel 包时的配置
+[tool.hatch.build.targets.wheel]
+packages = ["."]

@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Workspace-local build and package caches
+.tmp/
+.uv-cache/
